@@ -105,7 +105,7 @@ local newrender = is_synX and getupvalue(newDrawing, 1) or newDrawing
 --[[local destroy = is_synX and getupvalue(line_mt.__index, 3) or function(drawing)
     drawing:Remove()
 end
-]]
+
 local setproperty = is_synX and getupvalue(line_mt.__newindex, 4) or setrenderproperty or function(object, property, value)
     object[property] = value
 end
@@ -125,7 +125,7 @@ local function queue_property_set(object, property, value)
         object._queue[property] = value
     end
 end
-
+]]
 local Render = {Fonts = Drawing.Fonts, ZIndex = 1000000}
 
 local classes = {
